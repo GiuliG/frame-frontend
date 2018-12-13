@@ -1,4 +1,4 @@
 # Auth frontend app
 
-This app works with the following backend [https://github.com/Ironhack-PartTime-BCN/webdevFT-1018-backend-api](https://github.com/Ironhack-PartTime-BCN/webdevFT-1018-backend-api)
+This app works with the following backend [https://github.com/MarloMorgan/frame-backend](https://github.com/MarloMorgan/frame-backend)
 
