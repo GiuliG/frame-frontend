@@ -9,24 +9,25 @@ import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import AuthProvider from './providers/AuthProvider';
 import Home from './pages/Home';
-import PaintingsList from './pages/PaintingsList';
+//import PaintingsList from './pages/PaintingsList';
 
 class App extends Component {
   render() {
     return (
-      <PaintingsList />
-      // <AuthProvider>
-      //   <div className="container">
-      //     <h1>Basic React Authentication</h1>
-      //     <Navbar />
-      //     <Switch>
-      //         <Route exact path="/" component={Home} />
-      //         <AnonRoute path="/signup" component={Signup} />
-      //         <AnonRoute path="/login" component={Login} />
-      //         <PrivateRoute path="/private" component={Private} />
-      //     </Switch>
-      //   </div>
-      // </AuthProvider>
+      
+      <AuthProvider>
+        {/*<PaintingsList />*/}
+       <div className="container">
+           <h1>Basic React Authentication</h1>
+           <Navbar />
+          <Switch>
+              <Route exact path="/" component={Home} />
+               <AnonRoute path="/signup" component={Signup} />
+              <AnonRoute path="/login" component={Login} />
+              <PrivateRoute path="/private" component={Private} />
+          </Switch>
+        </div>
+       </AuthProvider>
     )
   }
 }
