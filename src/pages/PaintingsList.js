@@ -33,7 +33,6 @@ class PaintingsList extends Component {
       <div>
         <ul>
           {paintings.map((painting) => {
-            console.log(painting.artist)
             return (
             <div key={painting._id}>
               <img src={painting.image} alt={painting.title} width="300px"/>
