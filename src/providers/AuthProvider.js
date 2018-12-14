@@ -24,7 +24,6 @@ export const withAuth = (Comp) => {
   }
 }
 
-
 class AuthProvider extends Component {
   state = {
     user: null,
