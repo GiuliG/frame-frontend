@@ -32,6 +32,7 @@ class ExhibitionList extends Component {
     }
     return (
       <div>
+        <h2>{this.props.match.params.department}</h2>
         <ul>
           {paintings.map((painting) => {
             if (painting.department === this.props.match.params.department) {
