@@ -9,6 +9,7 @@ import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import AuthProvider from './providers/AuthProvider';
 import Home from './pages/Home';
+
 //import PaintingsList from './pages/PaintingsList';
 
 class App extends Component {
