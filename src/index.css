@@ -96,6 +96,37 @@ div#not-found span {
   border-radius: 4px;
 }
 
+/* --- PaintingCard component --- */ 
+
+div.painting-card {
+  align-content: flex-start;
+  margin: 2.2rem 2rem 2rem 2rem;
+  padding: 2rem 2.2rem 1.4rem 1.6rem;
+  border-radius: .7rem;
+  background-color: #f1f1f1;
+  box-shadow: 2px 4px 16px rgba(86, 79, 78, 0.3);
+}
+
+div.painting-card img {
+  float: left;
+  width: 30%;
+}
+
+div.painting-card h2 {
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+div.painting-card h5 {
+  font-size: 1.7rem;
+}
+
+div.painting-card p {
+  font-size: 1.4rem;
+}
+
+
 /* ---- section ---- */
 
 section.testimonials .button {

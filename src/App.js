@@ -9,7 +9,7 @@ import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import AuthProvider from './providers/AuthProvider';
 import Home from './pages/Home';
-import PaintingsList from './pages/PaintingsList';
+import ExhibitionList from './components/ExhibitionList';
 import NotFound from './pages/NotFound';
 
 class App extends Component {
@@ -21,6 +21,7 @@ class App extends Component {
           <AnonRoute path="/signup" component={Signup} />
           <AnonRoute path="/login" component={Login} />
           <PrivateRoute path="/private" component={Private} />
+          <PrivateRoute path="/me/paintings/:department" component={ExhibitionList} />
           <Route component={NotFound} />
         </Switch>
       </AuthProvider>
