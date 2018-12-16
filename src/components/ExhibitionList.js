@@ -37,7 +37,7 @@ class ExhibitionList extends Component {
     return (
       <div>
         <h2>{param}</h2>
-        <ul>
+        <div>
           {paintings.map((painting) => {
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
@@ -52,9 +52,7 @@ class ExhibitionList extends Component {
               
               
           })}
-        </ul>
-
-        
+        </div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import auth from '../lib/auth-service';
 import { withAuth } from '../providers/AuthProvider';
-import formErrors from '../helpers/formErrors';
+//import formErrors from '../helpers/formErrors';
 import { Link } from 'react-router-dom';
 
 
