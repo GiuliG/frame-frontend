@@ -59,15 +59,19 @@ class Login extends Component {
     const { email, password } = this.state;
     //const error = this.handleError();
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <label>Email:</label>
-        <input type="text" name="email" value={email} onChange={this.handleChange}/>
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={this.handleChange} />
-        <input type="submit" value="Login" />
-        {/*{ error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p> }*/}
-        <p className="small-text">New member?<Link to='/signup' className="primary-link"> Sign up</Link></p>
-      </form>
+      <div>
+        <h1>Login</h1>
+        <p className="small-text">To check the exhibition you need to log in or <Link to='/signup' className="primary-link">sign up</Link>.</p>
+        <form onSubmit={this.handleFormSubmit}>
+          <label>Email:</label>
+          <input type="text" name="email" value={email} onChange={this.handleChange}/>
+          <label>Password:</label>
+          <input type="password" name="password" value={password} onChange={this.handleChange} />
+          <input type="submit" value="Login" />
+          {/*{ error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p> }*/}
+          
+        </form>
+      </div>
     )
   }
 }

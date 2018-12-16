@@ -1,19 +1,69 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
     return (
-      <div id="bottom-row">
-          <div id="bottom-row">
-              <div id="bottom-right-column" class="right">
-                  <div id="bottom-right-column" class="right">
-                      <div class="small-box blue right"></div>
-                      <div id="divider-5" class="black right"></div>
-                      <div class="small-box yellow right"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
+<div className="home-page">
+        <div id="header-block">
+          <img src="./images/the_met_logo (1).png" alt="logo"/>
+          <h1>Explore Our Collections</h1>
+          
+        </div>
+         <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        
+        <li>
+          <Link to={'me/paintings/european-painting'}>
+            <div>
+                  <h1>European Painting</h1>
+                
+            </div>
+          </Link>
+        </li>
+        <li >
+        <Link to={'me/paintings/asian-art'}>
+            <div>
+                  <h1>Asian Art</h1>
+            
+            </div>
+          </Link>
+        </li>
+        <li> 
+         
+        </li>
+        <li></li>
+        <li></li>
+        <li>
+        <Link to={'me/paintings/modern-art'}>
+            <div>
+                  <h1>Modern & Contemporary Art</h1>
+               
+            </div>
+          </Link>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>
+        <Link to={'me/paintings/american-wing'}>
+            <div>
+                  <h1>The American Wing</h1>
+              
+            </div>
+          </Link>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     );
   }
 }

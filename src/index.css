@@ -1,0 +1,340 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+p {
+  margin: 0;
+}
+
+/* ---- layout ---- */
+
+#site-header {
+  padding: 30px 0;
+  color: white;
+  background: #111;
+}
+
+#site-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+#site-main {
+  margin-bottom: 60px;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.section {
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* ---- components ---- */
+
+.button {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+  border: 1px solid #fff
+}
+
+.button-alt {
+  color: blue;
+  background-color: #fff;
+}
+
+/* -- NotFound component -- */
+
+div#not-found {
+  width: 100%;
+  height: 100vh;
+  background: url('/images/404.png') no-repeat -28rem -8.5rem;
+  background-size: 90rem;
+}
+
+div#not-found span {
+  position: absolute;
+  top: 75%;
+  left: 27%;
+  color: #f1f1f1;
+  background-color: #f1f1f133;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: .5rem 1.2rem;
+  border: 2px solid #f1f1f1;
+  border-radius: 4px;
+}
+
+/* ---- HP Compontent ----*/
+#header-block {
+  height: 10vh;
+  border: 1px solid black;
+  background-color: #e4002b;;
+  color: white;
+}
+
+#header-block img{
+  height: 100%;
+  width: auto;
+}
+
+.home-page h1{
+  font-size: 28px;
+  color: white;
+  padding: 20px 5px 5px;
+  text-align: left;
+  font-weight: bold;
+  font-family: "MetSans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.home-page p{
+  font-size: 18px;
+  color: white;
+  font-family: "MetSans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 5px;
+}
+
+
+.home-page a:link{
+  color: white;
+  text-decoration: none;
+}
+
+.home-page{
+  height: 95vh;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1.2fr 1.2fr -0.5fr;
+  grid-template-rows: 14vw repeat(5, 15vw) 18vw 18vw 20vw;
+}
+li {
+  height: 100%;
+  border: 1px solid black;
+  background-size: cover;
+}
+li:nth-child(1) {
+  grid-column: span 2;
+  background-image: url('/images/grey.jpg'); 
+  border-top: none;
+  border-left: none;
+}
+li:nth-child(2) {
+  grid-column: span 3;
+  background-image: url('/images/lighter-grey.jpg');
+  border-top: none;
+}
+li:nth-child(3) {
+  grid-column: span 2;
+  background-image: url('/images/grey.jpg');
+  border-top: none;
+}
+li:nth-child(4) {
+  grid-row: span 6;
+  background-color: #FCFDE7;
+  border-top: none;
+  border-right: none;
+}
+li:nth-child(5) {
+  grid-row: span 2;
+  background-color: #FBFDE7;
+  border-left: none;
+}
+li:nth-child(6) {
+  grid-column: span 4;
+  grid-row: span 4;
+  background-image: url('/images/red.jpg')
+}
+li:nth-child(7) {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-image: url('/images/yellow.jpg')
+}
+li:nth-child(8) {
+  grid-row: span 3;
+  background-color: #E1EAE5;
+  border-left: none;
+}
+li:nth-child(9) {
+  grid-row: span 2;
+  background-image: url('/images/grey.jpg');
+}
+li:nth-child(10) {
+  grid-row: span 2;
+  background-image: url('/images/white.jpg');
+}
+li:nth-child(11) {
+  grid-row: span 3;
+  grid-column: span 3;
+  background-image: url('/images/yellow.jpg')
+}
+li:nth-child(12) {
+  grid-column: span 1;
+  background-image: url('/images/white.jpg')
+}
+li:nth-child(13) {
+  grid-column: span 2;
+  background-image: url('/images/lighter-grey.jpg');
+}
+li:nth-child(14) {
+  grid-row: span 3;
+  background-color: #F4C65A;
+  border-left: none;
+
+}
+li:nth-child(15) {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url('/images/black.jpg')
+}
+li:nth-child(16) {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-image: url('/images/grey.jpg')
+}
+li:nth-child(17) {
+  grid-row: span 3;
+  grid-column: span 2;
+  background-image: url('/images/grey.jpg')
+
+}
+li:nth-child(18) {
+  grid-row: span 2;
+  background-image: url('/images/lighter-grey.jpg');
+
+}
+li:nth-child(19) {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url('/images/yellow.jpg')
+  
+}
+li:nth-child(20) {
+  grid-column: span 8;
+  background-color: white;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+
+/* --- PaintingCard component --- */ 
+
+div.painting-card {
+  align-content: flex-start;
+  margin: 2.2rem 2rem 2rem 2rem;
+  padding: 2rem 2.2rem 1.4rem 1.6rem;
+  border-radius: .7rem;
+  background-color: #f1f1f1;
+  box-shadow: 2px 4px 16px rgba(86, 79, 78, 0.3);
+}
+
+div.painting-card img {
+  float: left;
+  width: 30%;
+}
+
+div.painting-card h2 {
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+div.painting-card h5 {
+  font-size: 1.7rem;
+}
+
+div.painting-card p {
+  font-size: 1.4rem;
+}
+
+
+/* ---- section ---- */
+
+section.testimonials .button {
+  margin-bottom: 10px;
+}
+
+/* -- forms -- */
+
+form.is-processing {
+	opacity: 0.5;
+}
+
+form .field {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+	font-style: bold;
+}
+
+form input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+form .submit {
+  padding-top: 20px;
+}
+
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #27afdc;
+  cursor: pointer;
+}
+
+form .validation {
+  margin: 5px 0 10px;
+  color: red;
+}
+
+form .field.has-error label {
+	color: red;
+}
+form .field.has-error input {
+	border: 1px solid  red;
+}
+
+
