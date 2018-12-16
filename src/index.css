@@ -74,6 +74,42 @@ p {
   background-color: #fff;
 }
 
+/* --- Navbar component --- */
+
+div#navbar {
+  position: fixed;
+  width: 100%;
+  height: 5.3rem;
+  bottom: 0;
+  background-color: #e92829;
+}
+
+div#navbar img {
+  padding-bottom: .6rem;
+  width: 3.3rem;
+  filter: invert(1);
+}
+
+div#navbar div.logged-out img {
+  margin: .8rem 3rem 0 7rem;
+  padding-bottom: .6rem;
+}
+
+div#navbar div.logged-out img.signupicon {
+  width: 3.8rem;
+  padding-bottom: .8rem;
+}
+
+div#navbar div.logged-in img {
+  margin: .8rem 4.1rem 0 3rem;
+  padding-bottom: .6rem;
+  width: 3.3rem;
+}
+
+div#navbar div.logged-in img.homeicon {
+  width: 3.9rem;
+}
+
 /* -- NotFound component -- */
 
 div#not-found {
@@ -129,10 +165,6 @@ div#not-found span {
 .home-page a:link{
   color: white;
   text-decoration: none;
-}
-
-.home-page{
-  height: 95vh;
 }
 
 ul, li {

@@ -18,9 +18,8 @@ class App extends Component {
   render() {
     return (
       <AuthProvider>
-       
         <Switch>
-          <Route exact path="/" component={Home} /> {/* links to departments are inside*/}
+          <Route exact path="/" component={Home} />
           <PrivateRoute path="/me/paintings/:department" component={ExhibitionList} /> {/* needs to take departments match parameters from the links in Home component*/}
           <AnonRoute path="/signup" component={Signup} />
           <AnonRoute path="/login" component={Login} />
