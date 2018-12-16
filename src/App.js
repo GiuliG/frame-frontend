@@ -20,12 +20,12 @@ class App extends Component {
       <AuthProvider>
        
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} /> {/* links to departments are inside*/}
+          <PrivateRoute path="/me/paintings/:department" component={ExhibitionList} /> {/* needs to take departments match parameters from the links in Home component*/}
           <AnonRoute path="/signup" component={Signup} />
           <AnonRoute path="/login" component={Login} />
           <PrivateRoute path="/private" component={Private} />
-          <PrivateRoute path="/me/paintings/:department" component={ExhibitionList} />
-          <Route component={NotFound} />
+          <Route path='*' component={NotFound} />
         </Switch>
         <Navbar/>
       </AuthProvider>
