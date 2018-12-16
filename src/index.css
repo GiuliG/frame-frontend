@@ -76,7 +76,7 @@ p {
 
 /* --- Navbar component --- */
 
-div#navbar {
+nav#navbar {
   position: fixed;
   width: 100%;
   height: 5.3rem;
@@ -84,29 +84,40 @@ div#navbar {
   background-color: #e92829;
 }
 
-div#navbar img {
-  padding-bottom: .6rem;
+nav#navbar img {
   width: 3.3rem;
   filter: invert(1);
 }
 
-div#navbar div.logged-out img {
-  margin: .8rem 3rem 0 7rem;
-  padding-bottom: .6rem;
+nav#navbar ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+  grid-template: none;
 }
 
-div#navbar div.logged-out img.signupicon {
+nav#navbar li {
+  display: inline-block;
+  margin-top: .7rem;
+  padding-bottom: .6rem;
+  grid-column: none;
+  background-image: none;
+  border: none;
+}
+
+nav#navbar ul.logged-in li {
+  width: 33%;
+}
+
+nav#navbar ul.logged-out li {
+  width: 48%;
+}
+
+nav#navbar ul.logged-out li img.signupicon {
   width: 3.8rem;
-  padding-bottom: .8rem;
 }
 
-div#navbar div.logged-in img {
-  margin: .8rem 4.1rem 0 3rem;
-  padding-bottom: .6rem;
-  width: 3.3rem;
-}
-
-div#navbar div.logged-in img.homeicon {
+nav#navbar ul.logged-in li img.homeicon {
   width: 3.9rem;
 }
 
