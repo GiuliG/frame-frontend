@@ -147,7 +147,7 @@ ul {
 }
 li {
   height: 100%;
-  border: 1px solid black;
+  border: 3px solid black;
   background-size: cover;
 }
 li:nth-child(1) {

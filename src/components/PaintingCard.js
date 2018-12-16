@@ -1,6 +1,7 @@
 'Use Strict'
 
 import React, { Component } from 'react';
+import HeartButton from './HeartButton';
 
 class PaintingCard extends Component {
   render() {
@@ -10,7 +11,7 @@ class PaintingCard extends Component {
         <h2>{this.props.title}</h2>
         <h5>{this.props.artist} - {this.props.date}</h5>
         <p>{this.props.description}</p>
-        <p>FAV</p>
+        <HeartButton/>
       </div>
     );
   }
