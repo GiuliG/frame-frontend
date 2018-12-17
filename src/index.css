@@ -195,7 +195,7 @@ ul, li {
 }
 ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 1.2fr 1.2fr -0.5fr;
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 14vw repeat(5, 15vw) 18vw 18vw 20vw;
 }
 li {

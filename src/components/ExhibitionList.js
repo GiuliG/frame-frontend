@@ -9,7 +9,7 @@ class ExhibitionList extends Component {
     paintings: [],
     error: null,
     isLoading: true,
-    showAddToFav: false,
+
   }
 
   componentDidMount() {
