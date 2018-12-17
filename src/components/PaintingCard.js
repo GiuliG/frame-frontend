@@ -11,7 +11,7 @@ class PaintingCard extends Component {
         <h2>{this.props.title}</h2>
         <h5>{this.props.artist} - {this.props.date}</h5>
         <p>{this.props.description}</p>
-        <HeartButton/>
+        <HeartButton paintingId={this.props.id}/>
       </div>
     );
   }

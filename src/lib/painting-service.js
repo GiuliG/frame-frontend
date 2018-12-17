@@ -13,7 +13,14 @@ class PaintingsApi {
       .then ((reponse) =>{
           return reponse.data
       })
-    }  
+    }
+    
+    addPaintingToFavs(id){
+      return this.apiInstance.put(`/api/paintings/favs/${id}`)
+      .then ((response) => {
+        return response.data
+      })
+    }
 }    
 const painting = new PaintingsApi()
 
