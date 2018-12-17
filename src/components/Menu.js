@@ -13,7 +13,7 @@ class Menu extends Component {
             <Link to='/private'>My Favourites</Link>
           </li>
           <li>
-            <Link to='/private'>Homepage</Link>
+            <Link to='/'>Homepage</Link>
           </li>
           <li>
             <span onClick={this.props.logout}>Log out</span>
