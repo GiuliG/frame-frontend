@@ -1,22 +1,24 @@
-import React, {Component} from 'react';
-
-import { PropTypes } from 'prop-types';
+import React, { Component } from 'react';
+import paintingService from '../lib/painting-service'
 
 class HeartButton extends Component {
 
-    state = {
-        addedToFavorite: false,
-    }
+  state = {
+    addedToFavorite: false,
+  }
 
-    addToFavorite = (e) => {
-        console.log(e)
-        
-        //get current user   
-        this.setState({
-          addedToFavorite: true,
-        })
+  addToFavorite = () => {
+    paintingService.addPaintingToFavs(this.props.paintingId)
+    .then(() => {
+      this.setState({
+        addedToFavorite: true,
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
 
-      }
     
     render () {
         const {addedToFavorite} = this.state;
@@ -26,10 +28,11 @@ class HeartButton extends Component {
             <div>
                 <button onClick={this.addToFavorite} id={this.props.id} style={[
               { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
-            ]}>Favourites</button>
+            ]}>Fav</button>
             </div>
         )
     }
+
 }
 
 export default HeartButton;

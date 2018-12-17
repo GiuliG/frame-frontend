@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withAuth } from '../providers/AuthProvider';
 import paintingService from '../lib/painting-service';
 import PaintingCard from './PaintingCard';
-import HearButton from './HeartButton';
+
 
 class ExhibitionList extends Component {
   state = {
@@ -30,7 +30,7 @@ class ExhibitionList extends Component {
   render() {
     const { paintings } = this.state
     const param = this.props.match.params.department;
-    const { showAddToFav, handleAddToFav } = this.props;
+
     if (this.state.isLoading) {
       return <div>Loading</div>
     }
