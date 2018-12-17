@@ -3,22 +3,22 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../providers/AuthProvider';
 
-//pls put props into this
-
 class Menu extends Component {
   render() {
     return (
       <div id="menu">
-        <span>X</span>
+        <span className="close" onClick={this.props.history.goBack}>
+          <img src={process.env.PUBLIC_URL + '/icons/close.svg'} alt="close" />
+        </span>
         <ul>
-          <li>
-            <Link to='/private'>My Favourites</Link>
-          </li>
           <li>
             <Link to='/'>Homepage</Link>
           </li>
           <li>
-            <span>Log out</span>
+            <Link to='/private'>My Favourites</Link>
+          </li>
+          <li>
+            <span onClick={this.props.logout}>Log out</span>
           </li>
         </ul>
       </div>

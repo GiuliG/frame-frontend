@@ -18,9 +18,9 @@ class Navbar extends Component {
           </Link>
         </li>
         <li>
-          <span onClick={this.renderMenu}>
+          <Link to='/me/menu'>
             <img src={process.env.PUBLIC_URL + '/icons/user-circle-solid.svg'} alt={this.props.user.username} />
-          </span>
+          </Link>
         </li>
       </ul>
     )
