@@ -42,9 +42,7 @@ class ExhibitionList extends Component {
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
             return (match && <PaintingCard key={painting._id} 
-              //forgot syntax for sending all props as one object :c
               image={painting.image} artist={painting.artist}
-              audio={painting.audio} country={painting.country}
               date={painting.date} department={painting.department}
               description={painting.description} title={painting.title}
               id={painting._id}/>
