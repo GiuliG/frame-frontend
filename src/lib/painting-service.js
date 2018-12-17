@@ -14,6 +14,13 @@ class PaintingsApi {
           return reponse.data
       })
     }
+
+    getAllFavs(){
+      return this.apiInstance.get('/api/paintings/favs')
+      .then ((reponse) =>{
+          return reponse.data
+      })
+    }
     
     addPaintingToFavs(id){
       return this.apiInstance.put(`/api/paintings/favs/${id}`)

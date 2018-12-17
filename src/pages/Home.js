@@ -41,7 +41,7 @@ class Home extends Component {
         <li>
         <Link to={'me/paintings/modern'}>
             <div>
-                  <h1>Modern & Contemporary Art</h1>
+                  <h1>Modern Art</h1>
                
             </div>
           </Link>
@@ -52,7 +52,7 @@ class Home extends Component {
         <li>
         <Link to={'me/paintings/american'}>
             <div>
-                  <h1>The American Wing</h1>
+                  <h1>American Art</h1>
               
             </div>
           </Link>
