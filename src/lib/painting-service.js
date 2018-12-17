@@ -21,6 +21,14 @@ class PaintingsApi {
         return response.data
       })
     }
+
+    removePaintingFromFavs(id){
+      return this.apiInstance.delete(`/api/paintings/favs/${id}`)
+      .then ((response) => {
+        return response.data
+      })
+    }
+
 }    
 const painting = new PaintingsApi()
 

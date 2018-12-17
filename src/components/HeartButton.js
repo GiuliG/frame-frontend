@@ -7,11 +7,25 @@ class HeartButton extends Component {
     addedToFavorite: false,
   }
 
+  
+
   addToFavorite = () => {
     paintingService.addPaintingToFavs(this.props.paintingId)
     .then(() => {
       this.setState({
         addedToFavorite: true,
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+
+  removeFromFavorite = () => {
+    paintingService.removePaintingFromFavs(this.props.paintingId)
+    .then(() => {
+      this.setState({
+        addedToFavorite: false,
       })
     })
     .catch((error) => {
@@ -26,9 +40,14 @@ class HeartButton extends Component {
         return (
           
             <div>
-                <button onClick={this.addToFavorite} id={this.props.id} style={[
+                <button onClick={this.handleFavorites} id={this.props.id} style={[
               { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
             ]}>Fav</button>
+
+<button onClick={this.removeFromFavorite} id={this.props.id} style={[
+              { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
+            ]}>Remove</button>
+
             </div>
         )
     }
