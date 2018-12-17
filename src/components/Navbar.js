@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../providers/AuthProvider';
-import Menu from './Menu'
-
 
 class Navbar extends Component {
-
-  renderMenu = () => {
-    console.log('called')
-    return <Menu/>
-  }
 
   renderIsLoggedIn = () => {
     return (

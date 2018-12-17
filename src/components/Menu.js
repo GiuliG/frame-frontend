@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../providers/AuthProvider';
 
+//pls put props into this
+
 class Menu extends Component {
   render() {
     return (
       <div id="menu">
-        <span onClick={this.props.history.goBack}>X</span>
+        <span>X</span>
         <ul>
           <li>
             <Link to='/private'>My Favourites</Link>
@@ -16,7 +18,7 @@ class Menu extends Component {
             <Link to='/'>Homepage</Link>
           </li>
           <li>
-            <span onClick={this.props.logout}>Log out</span>
+            <span>Log out</span>
           </li>
         </ul>
       </div>
