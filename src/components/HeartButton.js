@@ -8,7 +8,9 @@ class HeartButton extends Component {
         addedToFavorite: false,
     }
 
-    addToFavorite = () => {
+    addToFavorite = (e) => {
+        console.log(e)
+        
         //get current user   
         this.setState({
           addedToFavorite: true,
@@ -18,12 +20,11 @@ class HeartButton extends Component {
     
     render () {
         const {addedToFavorite} = this.state;
-        const { color, selectedColor} = this.props;
         console.log(addedToFavorite)
         return (
           
             <div>
-                <button  name={this.addToFavorite} onClick={this.addToFavorite}  style={[
+                <button onClick={this.addToFavorite} id={this.props.id} style={[
               { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
             ]}>Favourites</button>
             </div>
