@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../providers/AuthProvider';
-import Menu from './Menu'
-
 
 class Navbar extends Component {
-
-  renderMenu = () => {
-    console.log('called')
-    return <Menu/>
-  }
 
   renderIsLoggedIn = () => {
     return (
       <ul className="logged-in">
         <li>
-          <Link to='/'>
+          <Link to='/me/scan'>
             <img src={process.env.PUBLIC_URL + '/icons/cam-shutter-solid.svg'} alt="scan a painting" />
           </Link>
         </li>
@@ -25,9 +18,9 @@ class Navbar extends Component {
           </Link>
         </li>
         <li>
-          <span onClick={this.renderMenu}>
+          <Link to='/me/menu'>
             <img src={process.env.PUBLIC_URL + '/icons/user-circle-solid.svg'} alt={this.props.user.username} />
-          </span>
+          </Link>
         </li>
       </ul>
     )

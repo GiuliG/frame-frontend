@@ -12,7 +12,6 @@ class PaintingsList extends Component {
   componentDidMount() {
     paintingService.getAllPaintings()
       .then((paintings) => {
-        console.log('paintings are ', paintings)
         this.setState({
           paintings,
           isLoading: false,

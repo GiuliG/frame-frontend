@@ -36,7 +36,6 @@ class HeartButton extends Component {
     
     render () {
         const {addedToFavorite} = this.state;
-        console.log(addedToFavorite)
         return (
           
             <div>
