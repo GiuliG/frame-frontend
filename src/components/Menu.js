@@ -8,7 +8,7 @@ class Menu extends Component {
     return (
       <div id="menu">
         <span className="close" onClick={this.props.history.goBack}>
-          <img src={process.env.PUBLIC_URL + '/icons/close.svg'} alt="close" />
+          <img className="icon" src={process.env.PUBLIC_URL + '/icons/close.svg'} alt="close" />
         </span>
         <ul>
           <li>

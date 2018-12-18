@@ -35,7 +35,7 @@ class Private extends Component {
             <PaintingCard key={eachFav._id} image={eachFav.image}
               artist={eachFav.artist} date={eachFav.date}
               department={eachFav.department} description={eachFav.description}
-              title={eachFav.title} id={eachFav._id} />
+              title={eachFav.title} id={eachFav._id} isFavorite={true} />
           )
         })}
         </div>
