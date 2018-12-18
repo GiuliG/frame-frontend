@@ -35,20 +35,16 @@ class HeartButton extends Component {
   render() {
     const { addedToFavorite } = this.state;
     return (
-
       <div id="favs">
-        { !addedToFavorite ? <button onClick={this.addToFavorite} id={this.props.id}>
+        {!addedToFavorite ? <button onClick={this.addToFavorite} id={this.props.id}>
           <img className="icon" src={process.env.PUBLIC_URL + '/icons/like.svg'} alt="add to favs" />
-          Add
-        </button> : 
-        <button onClick={this.removeFromFavorite} id={this.props.id}>
-          <img className="icon" src={process.env.PUBLIC_URL + '/icons/like-alt.svg'} alt="remove from favs" />
-          Remove
-        </button>}
+        </button> :
+          <button onClick={this.removeFromFavorite} id={this.props.id}>
+            <img className="icon" src={process.env.PUBLIC_URL + '/icons/like-alt.svg'} alt="remove from favs" />
+          </button>}
       </div>
     )
   }
-
 }
 
 export default HeartButton;

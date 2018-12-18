@@ -58,6 +58,10 @@ p {
   padding-top: 0px;
 }
 
+div.pad-bottom {
+  padding-bottom: 7rem;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 90%;
@@ -166,16 +170,21 @@ div#menu span.close img {
 
 /* -- HeartButton component --*/
 
+div#favs {
+  margin-top: 1rem;
+  text-align: right;
+  padding-right: .4rem;
+}
+
 div#favs button {
-  margin: 0 0 0 40%;
   background: none;
-  padding: 0;
-  width: 4rem;
-  height: 4rem;
+  padding: 0 1rem;
+  text-align: right;
   border: none;
 }
 
 div#favs button img.icon {
+  margin: 0;
   width: 4rem;
   filter: invert(50%) brightness(70%) sepia(100%) hue-rotate(310deg) saturate(270%) contrast(2.3);
 }
