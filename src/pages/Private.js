@@ -31,15 +31,12 @@ class Private extends Component {
       <div>
         <h1>Welcome {this.props.user.username}</h1>
         <h3 onClick={this.props.logout}>Log out</h3>
-    
-   
-        
-        {loading ? <p className="error-sms">Loading</p> : <div>{favs.map((eachFav) => {
+        {loading ? <p className="error-sms">Loading</p> : <div className="pad-bottom">{favs.map((eachFav) => {
           return (
             <PaintingCard key={eachFav._id} image={eachFav.image}
               artist={eachFav.artist} date={eachFav.date}
               department={eachFav.department} description={eachFav.description}
-              title={eachFav.title} id={eachFav._id} />
+              title={eachFav.title} id={eachFav._id} isFavorite={true} />
           )
         })}
         </div>

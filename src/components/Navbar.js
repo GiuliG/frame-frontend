@@ -14,12 +14,12 @@ class Navbar extends Component {
         </li>
         <li>
           <Link to='/'>
-            <img src={process.env.PUBLIC_URL + '/icons/home-solid.svg'} alt="to homepage" className="homeicon" />
+            <img className="icon homeicon" src={process.env.PUBLIC_URL + '/icons/home-solid.svg'} alt="to homepage" />
           </Link>
         </li>
         <li>
           <Link to='/me/menu'>
-            <img src={process.env.PUBLIC_URL + '/icons/user-circle-solid.svg'} alt={this.props.user.username} />
+            <img className="icon" src={process.env.PUBLIC_URL + '/icons/user-circle-solid.svg'} alt={this.props.user.username} />
           </Link>
         </li>
       </ul>
@@ -31,12 +31,17 @@ class Navbar extends Component {
       <ul className="logged-out">
         <li>
           <Link to='/signup'>
-            <img src={process.env.PUBLIC_URL + '/icons/user-plus-solid.svg'} alt="sign up" className="signupicon" />
+            <img className="icon signupicon" src={process.env.PUBLIC_URL + '/icons/user-plus-solid.svg'} alt="sign up" />
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>
+            <img className="icon homeicon" src={process.env.PUBLIC_URL + '/icons/home-solid.svg'} alt="to homepage" />
           </Link>
         </li>
         <li>
           <Link to='/login'>
-            <img src={process.env.PUBLIC_URL + '/icons/sign-in-alt-solid.svg'} alt="log in" />
+            <img className="icon" src={process.env.PUBLIC_URL + '/icons/sign-in-alt-solid.svg'} alt="log in" />
           </Link>
         </li>
       </ul>

@@ -6,8 +6,4 @@ import App from './App';
 import './index.css'
 import 'milligram/dist/milligram.css';
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>
-, document.getElementById('root'));
+ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));

@@ -27,7 +27,7 @@ class App extends Component {
           <PrivateRoute path="/me/scan" component={Scan} />
           <Route path='*' component={NotFound} />
         </Switch>
-        <Navbar/>
+        <Navbar />
       </AuthProvider>
     )
   }

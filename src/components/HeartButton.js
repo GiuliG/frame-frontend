@@ -4,53 +4,47 @@ import paintingService from '../lib/painting-service'
 class HeartButton extends Component {
 
   state = {
-    addedToFavorite: false,
+    addedToFavorite: this.props.isFavorite
   }
-
-  
 
   addToFavorite = () => {
     paintingService.addPaintingToFavs(this.props.paintingId)
-    .then(() => {
-      this.setState({
-        addedToFavorite: true,
+      .then(() => {
+        this.setState({
+          addedToFavorite: true,
+        })
       })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   removeFromFavorite = () => {
     paintingService.removePaintingFromFavs(this.props.paintingId)
-    .then(() => {
-      this.setState({
-        addedToFavorite: false,
+      .then(() => {
+        this.setState({
+          addedToFavorite: false,
+        })
       })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
-    
-    render () {
-        const {addedToFavorite} = this.state;
-        return (
-          
-            <div>
-                <button onClick={this.addToFavorite} id={this.props.id} style={[
-              { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
-            ]}>Fav</button>
 
-<button onClick={this.removeFromFavorite} id={this.props.id} style={[
-              { display: addedToFavorite ? 'block' : 'none' },{color : addedToFavorite ? 'pink' : 'none' }
-            ]}>Remove</button>
-
-            </div>
-        )
-    }
-
+  render() {
+    const { addedToFavorite } = this.state;
+    return (
+      <div id="favs">
+        {!addedToFavorite ? <button onClick={this.addToFavorite} id={this.props.id}>
+          <img className="icon" src={process.env.PUBLIC_URL + '/icons/like.svg'} alt="add to favs" />
+        </button> :
+          <button onClick={this.removeFromFavorite} id={this.props.id}>
+            <img className="icon" src={process.env.PUBLIC_URL + '/icons/like-alt.svg'} alt="remove from favs" />
+          </button>}
+      </div>
+    )
+  }
 }
 
 export default HeartButton;

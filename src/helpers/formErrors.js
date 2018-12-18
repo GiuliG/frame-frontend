@@ -7,19 +7,16 @@ const handleError = (error) => {
     case 'email-not-unique':
       isAlreadyUser = true;
       break;
-      case 'user-not-found-or-password-wrong':
-    wrongEmailPassword = true;
+    case 'user-not-found-or-password-wrong':
+      wrongEmailPassword = true;
       break;
-    default :
+    default:
       isEmpty = true;
       break;
   }
-  return {wrongEmailPassword, isAlreadyUser, isEmpty};
+  return { wrongEmailPassword, isAlreadyUser, isEmpty };
 }
 
-
-// Export
 export default {
   handleError
 }
-  
