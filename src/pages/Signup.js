@@ -20,40 +20,39 @@ class Signup extends Component {
     const username = this.state.username;
     const email = this.state.email;
     const password = this.state.password;
-    
     this.setState({
       isAlreadyUser: false,
       isEmpty: false,
     });
-   
+
     auth.signup({ username, email, password })
-      .then( (user) => {
+      .then((user) => {
         this.setState({
-            username: "",
-            email: "",
-            password: "",
+          username: "",
+          email: "",
+          password: "",
         });
         this.props.setUser(user)
       })
-      .catch( (error) => {
-        const {isAlreadyUser, isEmpty} = formErrors.handleError(error);
+      .catch((error) => {
+        const { isAlreadyUser, isEmpty } = formErrors.handleError(error);
         this.setState({
           email: '',
           password: '',
           isAlreadyUser,
-          isEmpty
+          isEmpty,
         });
       });
   }
 
-  handleChange = (event) => {  
-    const {name, value} = event.target;
-    this.setState({[name]: value});
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   }
 
   handleError = () => {
-    const { isAlreadyUser , isEmpty} = this.state;
-    if(isEmpty){
+    const { isAlreadyUser, isEmpty } = this.state;
+    if (isEmpty) {
       return 'Please fill fields'
     } else if (isAlreadyUser) {
       return 'User already exists'
@@ -70,17 +69,17 @@ class Signup extends Component {
         <h2>Signup</h2>
         <p>To See the Exhibitions you first need to signup</p>
         <form onSubmit={this.handleFormSubmit}>
-        <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
+          <label>Username:</label>
+          <input type="text" name="username" value={username} onChange={this.handleChange} />
           <label>Email:</label>
-          <input type="email" name="email" value={email} onChange={this.handleChange}/>
+          <input type="email" name="email" value={email} onChange={this.handleChange} />
           <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} />
           <input type="submit" value="Signup" />
         </form>
-        { error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p> }
+        {error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p>}
 
-        <p>Already have an account? 
+        <p>Already have an account?
           <Link to={"/login"}> Login</Link>
         </p>
 

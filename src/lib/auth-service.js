@@ -10,13 +10,13 @@ class Auth {
 
   signup(user) {
     const { username, email, password } = user;
-    return this.auth.post('/auth/signup', {username, email, password})
+    return this.auth.post('/auth/signup', { username, email, password })
       .then(({ data }) => data);
   }
 
   login(user) {
     const { email, password } = user;
-    return this.auth.post('/auth/login', {email, password})
+    return this.auth.post('/auth/login', { email, password })
       .then(({ data }) => data);
   }
 
@@ -27,7 +27,7 @@ class Auth {
 
   me() {
     return this.auth.get('/auth/me')
-    .then(response => response.data)
+      .then(response => response.data)
   }
 }
 

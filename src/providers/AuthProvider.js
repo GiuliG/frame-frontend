@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import auth from '../lib/auth-service';
 
 const AuthContext = React.createContext();
@@ -28,7 +28,8 @@ class AuthProvider extends Component {
   state = {
     user: null,
     isLogged: false,
-    isLoading: true
+    isLoading: true,
+    error: null,
   }
 
   componentDidMount() {
@@ -45,6 +46,7 @@ class AuthProvider extends Component {
           user: null,
           isLogged: false,
           isLoading: false,
+          error
         })
       })
   }
@@ -56,15 +58,19 @@ class AuthProvider extends Component {
     })
   }
 
-  logoutUser = () =>{
+  logoutUser = () => {
     auth.logout()
       .then(() => {
-        this.setState({ 
+        this.setState({
           isLogged: false,
           user: null,
         });
       })
-      .catch( error => console.log(error))
+      .catch(error => {
+        this.setState({
+          error
+        })
+      })
   }
 
   render() {

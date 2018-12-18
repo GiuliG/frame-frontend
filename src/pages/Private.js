@@ -26,7 +26,6 @@ class Private extends Component {
   render() {
     const loading = this.state.isLoading;
     const favs = this.state.paintings.favs;
-    console.log(favs)
     return (
       <div>
         <h1>Welcome {this.props.user.username}</h1>
