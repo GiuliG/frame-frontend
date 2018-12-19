@@ -16,14 +16,14 @@ class Home extends Component {
           <li></li>
           <li></li>
           <li>
-            <Link to={'me/paintings/european'}>
+            <Link to={'me/paintings/department/european'}>
               <div>
                 <h1>European Painting</h1>
               </div>
             </Link>
           </li>
           <li>
-            <Link to={'me/paintings/asian'}>
+            <Link to={'me/paintings/department/asian'}>
               <div>
                 <h1>Asian Art</h1>
               </div>
@@ -34,7 +34,7 @@ class Home extends Component {
           <li></li>
           <li></li>
           <li>
-            <Link to={'me/paintings/modern'}>
+            <Link to={'me/paintings/department/modern'}>
               <div>
                 <h1>Modern Art</h1>
               </div>
@@ -44,7 +44,7 @@ class Home extends Component {
           <li></li>
           <li></li>
           <li>
-            <Link to={'me/paintings/american'}>
+            <Link to={'me/paintings/department/american'}>
               <div>
                 <h1>American Art</h1>
               </div>
