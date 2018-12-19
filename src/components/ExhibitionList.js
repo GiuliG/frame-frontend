@@ -52,7 +52,6 @@ class ExhibitionList extends Component {
         <h2>{param}</h2>
         <div className="pad-bottom">
           {paintings.map((painting) => {
-            console.log(painting)
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
             return (match && <PaintingCard key={painting._id}
