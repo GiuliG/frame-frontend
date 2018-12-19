@@ -293,8 +293,8 @@ li:nth-child(15) {
   background-image: url('/images/black.jpg')
 }
 li:nth-child(16) {
-  grid-row: span 0;
-  grid-column: span 0;
+  grid-row: span 2;
+  grid-column: span 1;
   background-image: url('/images/grey.jpg')
 }
 li:nth-child(17) {
