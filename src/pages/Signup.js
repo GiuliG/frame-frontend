@@ -8,9 +8,9 @@ import formErrors from '../helpers/formErrors';
 class Signup extends Component {
 
   state = {
-    username: "",
-    email: "",
-    password: "",
+    username: '',
+    email: '',
+    password: '',
     isAlreadyUser: false,
     isEmpty: false,
   };
@@ -28,9 +28,9 @@ class Signup extends Component {
     auth.signup({ username, email, password })
       .then((user) => {
         this.setState({
-          username: "",
-          email: "",
-          password: "",
+          username: '',
+          email: '',
+          password: '',
         });
         this.props.setUser(user)
       })
