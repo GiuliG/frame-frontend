@@ -12,6 +12,7 @@ import ExhibitionList from './components/ExhibitionList';
 import NotFound from './pages/NotFound';
 import Menu from './components/Menu';
 import Detail from './components/Detail';
+import Scan from './components/ScanForm';
 
 class App extends Component {
   render() {
@@ -25,7 +26,7 @@ class App extends Component {
           <AnonRoute path="/login" component={Login}/>
           <PrivateRoute path="/private" component={Private} />
           <PrivateRoute path="/me/menu" component={Menu} />
-          {/* <PrivateRoute path="/me/scan" component={Scan} /> */}
+          <PrivateRoute path="/me/scan" component={Scan} /> 
           <Route path='*' component={NotFound} />
         </Switch>
         <Navbar />
