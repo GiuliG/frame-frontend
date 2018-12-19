@@ -60,7 +60,8 @@ class ExhibitionList extends Component {
               date={painting.date} department={painting.department}
               description={painting.description} title={painting.title}
               // isFavorite prop calls a function that returns a boolean
-              id={painting._id} isFavorite={this.checkIfInFavs(painting._id)} 
+              id={painting._id} isFavorite={this.checkIfInFavs(painting._id)
+              } 
               />)
           })}
         </div>
