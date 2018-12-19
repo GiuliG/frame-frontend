@@ -8,9 +8,9 @@ import formErrors from '../helpers/formErrors';
 class Signup extends Component {
 
   state = {
-    username: "",
-    email: "",
-    password: "",
+    username: '',
+    email: '',
+    password: '',
     isAlreadyUser: false,
     isEmpty: false,
   };
@@ -28,9 +28,9 @@ class Signup extends Component {
     auth.signup({ username, email, password })
       .then((user) => {
         this.setState({
-          username: "",
-          email: "",
-          password: "",
+          username: '',
+          email: '',
+          password: '',
         });
         this.props.setUser(user)
       })
@@ -65,9 +65,9 @@ class Signup extends Component {
     const { username, email, password } = this.state;
     const error = this.handleError();
     return (
-      <div>
-        <h2>Signup</h2>
-        <p>To See the Exhibitions you first need to signup</p>
+      <div className="container">
+        <h1>Signup</h1>
+        <p>Sign up to browse the MET Collection</p>
         <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange} />

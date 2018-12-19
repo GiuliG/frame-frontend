@@ -9,7 +9,7 @@ class Navbar extends Component {
       <ul className="logged-in">
         <li>
           <Link to='/me/scan'>
-            <img src={process.env.PUBLIC_URL + '/icons/cam-shutter-solid.svg'} alt="scan a painting" />
+            <img className="icon" src={process.env.PUBLIC_URL + '/icons/cam-shutter-solid.svg'} alt="scan a painting" />
           </Link>
         </li>
         <li>
