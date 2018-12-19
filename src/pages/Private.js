@@ -24,6 +24,15 @@ class Private extends Component {
         })
       })
   }
+
+  checkDeleltedOnes = (results) => {
+    this.setState({
+      paintings: {
+        favs: results.favs
+      }
+    })
+  }
+
   render() {
     const loading = this.state.isLoading;
     const favs = this.state.paintings.favs;
@@ -36,7 +45,7 @@ class Private extends Component {
             <PaintingCard key={eachFav._id} image={eachFav.image}
               artist={eachFav.artist} date={eachFav.date}
               department={eachFav.department} description={eachFav.description}
-              title={eachFav.title} id={eachFav._id} isFavorite={true} />
+              title={eachFav.title} id={eachFav._id} isFavorite={true} deleteFav={this.checkDeleltedOnes} />
           )
         })}
         </div>

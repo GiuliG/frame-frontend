@@ -21,7 +21,10 @@ class HeartButton extends Component {
 
   removeFromFavorite = () => {
     paintingService.removePaintingFromFavs(this.props.paintingId)
-      .then(() => {
+      .then((results) => {
+        if(this.props.deleteFav) {
+          this.props.deleteFav(results)
+        }
         this.setState({
           addedToFavorite: false,
         })

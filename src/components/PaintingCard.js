@@ -20,7 +20,7 @@ class PaintingCard extends Component {
        
         <Link to={`/me/paintings/${this.props.id}`}> Explore</Link>
         {/*<p>{this.props.description}</p>*/}
-        <HeartButton paintingId={this.props.id} isFavorite={this.props.isFavorite} />
+        <HeartButton paintingId={this.props.id} isFavorite={this.props.isFavorite} deleteFav={this.props.deleteFav}/>
       </div>
     );
   }

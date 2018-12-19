@@ -40,9 +40,9 @@ componentDidMount(){
               <p>{this.state.painting.description}</p>
               <h5>Listen to the Audio Guide</h5>
                 <audio controls src={this.state.painting.audio} type="audio/mp3">
-                  Listen to Audio Guide
+                  <h3>Listen to Audio Guide:</h3>
                   </audio>
-                  <span onClick={this.props.history.goBack}>back</span>
+                  <span onClick={this.props.history.goBack}>back to collection</span>
             </div>
           </div>
         );
