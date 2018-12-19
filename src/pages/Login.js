@@ -61,15 +61,14 @@ class Login extends Component {
     return (
       <div className="container">
         <h1>Login</h1>
-        <p className="small-text">Log in or <Link to='/signup' className="primary-link">sign up</Link> to browse the MET Collection.</p>
+        <p>Log in or <Link to='/signup' className="primary-link">sign up</Link> to browse the MET Collection.</p>
         <form onSubmit={this.handleFormSubmit}>
           <label>Email:</label>
           <input type="text" name="email" value={email} onChange={this.handleChange}/>
           <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Login" />
-          { error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p> }
-          
+          <input type="submit" value="Login" className="form-button"/>
+          { error ? <p className="validation">{error}</p> : <p className="validation"></p> }
         </form>
       </div>
     )
