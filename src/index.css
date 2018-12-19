@@ -35,6 +35,8 @@ a, span {
   margin: 2rem;
 }
 
+
+
 @media (min-width: 768px) {
   .container {
     max-width: 90%;
@@ -184,6 +186,15 @@ div#not-found span {
 
 .home-page h1{
   font-size: 28px;
+  color: white;
+  padding: 20px 5px 5px;
+  text-align: left;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.home-page h2{
+  font-size: 20px;
   color: white;
   padding: 20px 5px 5px;
   text-align: left;
@@ -419,4 +430,12 @@ form .field.has-error label {
 }
 form .field.has-error input {
 	border: 1px solid  red;
+}
+
+.ex-title {
+  text-transform: uppercase;
+  font-family: "MetSans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  color: #1a1a1a;
+  font-size: 20px;
 }

@@ -39,7 +39,7 @@ class Private extends Component {
     return (
       <div>
         <h1>Welcome {this.props.user.username}</h1>
-        <h3 onClick={this.props.logout}>Log out</h3>
+        <h3>Check Your Personal Collections</h3>
         {loading ? <p className="error-sms">Loading</p> : <div id="main">{favs.map((eachFav) => {
           return (
             <PaintingCard key={eachFav._id} image={eachFav.image}

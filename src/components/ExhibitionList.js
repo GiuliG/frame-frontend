@@ -49,8 +49,9 @@ class ExhibitionList extends Component {
       return <div>Loading...</div>
     } return (
       <div>
-        <h2>{param}</h2>
+        
         <div id="main">
+        <h2 className="container ex-title">{param}</h2>
           {paintings.map((painting) => {
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
