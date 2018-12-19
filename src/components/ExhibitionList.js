@@ -54,12 +54,14 @@ class ExhibitionList extends Component {
           {paintings.map((painting) => {
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
-            return (match && <PaintingCard key={painting._id}
+            return (match && 
+            <PaintingCard key={painting._id}
               image={painting.image} artist={painting.artist}
               date={painting.date} department={painting.department}
               description={painting.description} title={painting.title}
               // isFavorite prop calls a function that returns a boolean
-              id={painting._id} isFavorite={this.checkIfInFavs(painting._id)} />)
+              id={painting._id} isFavorite={this.checkIfInFavs(painting._id)} 
+              />)
           })}
         </div>
       </div>

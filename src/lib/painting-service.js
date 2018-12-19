@@ -36,7 +36,18 @@ class PaintingsApi {
       })
   }
 
+  getDetailPainting(id) {
+    return this.apiInstance.get(`api/paintings/${id}`)
+     //I am returning a reponse 
+     .then ((reponse) =>{
+        return reponse.data
+    })
+  }
+
 }
+
+
+
 const painting = new PaintingsApi()
 
 export default painting

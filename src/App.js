@@ -11,7 +11,7 @@ import Home from './pages/Home';
 import ExhibitionList from './components/ExhibitionList';
 import NotFound from './pages/NotFound';
 import Menu from './components/Menu';
-import DetailPage from './components/DetailPage';
+import Detail from './components/Detail';
 
 class App extends Component {
   render() {
@@ -19,13 +19,13 @@ class App extends Component {
       <AuthProvider>
         <Switch>
           <Route exact path="/" component={Home} />
-          <PrivateRoute exact path="/me/paintings/:id" component={DetailPage}/>
+          <PrivateRoute exact path="/me/paintings/:id" component={Detail}/>
           <PrivateRoute exact path="/me/paintings/department/:department" component={ExhibitionList} />
           <AnonRoute path="/signup" component={Signup} />
           <AnonRoute path="/login" component={Login} />
           <PrivateRoute path="/private" component={Private} />
           <PrivateRoute path="/me/menu" component={Menu} />
-          <PrivateRoute path="/me/scan" component={Scan} />
+          {/*<PrivateRoute path="/me/scan" component={Scan} />*/}
           <Route path='*' component={NotFound} />
         </Switch>
         <Navbar />
