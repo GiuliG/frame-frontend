@@ -75,9 +75,9 @@ class Signup extends Component {
           <input type="email" name="email" value={email} onChange={this.handleChange} />
           <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Signup" />
+          <input type="submit" value="Signup" className="form-button" />
         </form>
-        {error ? <p className="error-sms">{error}</p> : <p className="error-sms"></p>}
+        {error ? <p className="validation">{error}</p> : <p className="validation"></p>}
 
         <p>Already have an account?
           <Link to={"/login"}> Login</Link>

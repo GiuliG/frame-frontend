@@ -1,3 +1,13 @@
+/*
+Color palette:
+- almost black: #111
+- gold: #f4c65a
+- almost white: #f1f1f1
+- gray: #9c9c9c
+- dark gray: #222020
+- met red: #e92829
+*/
+
 /* ---- reset ---- */
 
 * {
@@ -16,13 +26,18 @@ html {
 
 body {
   color: #111;
-  font-family: "MetSans","Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: sans-serif;
+  font-size: 1rem;
 }
 
 a, span {
   font-weight: bold;
   text-decoration: none;
+  color: #e92829;
+}
+
+div.container p {
+  font-size: 1.5rem;
 }
 
 /* ---- layout ---- */
@@ -32,7 +47,7 @@ a, span {
 }
 
 .container {
-  margin: 2rem;
+  padding: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -61,21 +76,20 @@ nav#navbar {
 nav#navbar ul {
   display: inline;
   text-align: center;
-  list-style: none;
   grid-template: none;
 }
 
 nav#navbar ul li {
   display: inline-block;
   width: 33%;
-  margin-top: .7rem;
+  margin-top: .8rem;
   padding-bottom: .6rem;
   grid-column: none;
   background-image: none;
   border: none;
 }
 
-nav#navbar ul li img {
+nav#navbar ul li img.icon {
   width: 3.3rem;
 }
 
@@ -98,23 +112,22 @@ div#menu {
 
 div#menu ul {
   display: block;
-  margin: 15% 10% 0 10%;
+  margin: 20% 10% 0 10%;
   text-align: right;
-  list-style: none;
   grid-template: none;
 }
 
 div#menu li {
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 0 1rem 2.3rem 0;
   grid-column: none;
   background-image: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 2.7rem;
   border-bottom: 3px solid #f1f1f1;
 }
 
-div#menu a {
+div#menu a, span {
   color: #f1f1f1;
 }
 
@@ -173,7 +186,7 @@ div#not-found span {
 #header-block {
   height: 10vh;
   border: 0px solid black;
-  background-color: #e4002b;;
+  background-color: #e92829;
   color: white;
 }
 
@@ -188,7 +201,6 @@ div#not-found span {
   padding: 20px 5px 5px;
   text-align: left;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .home-page p{
@@ -196,7 +208,6 @@ div#not-found span {
   color: white;
   padding: 5px;
 }
-
 
 .home-page a:link{
   color: white;
@@ -361,33 +372,25 @@ div.painting-card img {
 }
 
 div.painting-card h2 {
-  padding: 0;
   margin: 0;
   font-size: 2rem;
   font-weight: bold;
 }
 
 div.painting-card h5 {
-  padding: 0;
   margin: 0;
   font-size: 1.7rem;
 }
 
-div.painting-card p {
-  padding: .4rem 0 0 0;
-  margin: 0;
-  font-size: 1.4rem;
+div.painting-card a {
+  font-size: 1.7rem;
 }
 
 /* -- forms -- */
 
-form .field {
-	margin-bottom: 20px;
-}
-
 form label {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 	font-style: bold;
 }
 
@@ -396,26 +399,22 @@ form input {
   font-size: 16px;
 }
 
-form .submit {
-  padding-top: 20px;
+form input.form-button {
+  margin-top: 1rem;
+  background: #f4c65a;
+  border: none;
 }
 
-form .submit button {
-  padding: 5px 20px;
-  text-align: center;
-  font-size: 16px;
-  background-color: #27afdc;
-  cursor: pointer;
+form input.form-button[value] {
+  padding-top: .2rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #111;
 }
 
-form .validation {
+p.validation {
   margin: 5px 0 10px;
-  color: red;
-}
-
-form .field.has-error label {
-	color: red;
-}
-form .field.has-error input {
-	border: 1px solid  red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e92829;
 }
