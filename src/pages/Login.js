@@ -59,9 +59,9 @@ class Login extends Component {
     const { email, password } = this.state;
     const error = this.handleError();
     return (
-      <div>
+      <div className="container">
         <h1>Login</h1>
-        <p className="small-text">To check the exhibition you need to log in or <Link to='/signup' className="primary-link">sign up</Link>.</p>
+        <p className="small-text">Log in or <Link to='/signup' className="primary-link">sign up</Link> to browse the MET Collection.</p>
         <form onSubmit={this.handleFormSubmit}>
           <label>Email:</label>
           <input type="text" name="email" value={email} onChange={this.handleChange}/>

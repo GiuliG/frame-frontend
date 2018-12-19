@@ -22,10 +22,10 @@ class App extends Component {
           <PrivateRoute exact path="/me/paintings/:id" component={DetailPage}/>
           <PrivateRoute exact path="/me/paintings/department/:department" component={ExhibitionList} />
           <AnonRoute path="/signup" component={Signup} />
-          <AnonRoute path="/login" component={Login} />
+          <AnonRoute path="/login" component={Login}/>
           <PrivateRoute path="/private" component={Private} />
           <PrivateRoute path="/me/menu" component={Menu} />
-          <PrivateRoute path="/me/scan" component={Scan} />
+          {/* <PrivateRoute path="/me/scan" component={Scan} /> */}
           <Route path='*' component={NotFound} />
         </Switch>
         <Navbar />

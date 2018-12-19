@@ -65,9 +65,9 @@ class Signup extends Component {
     const { username, email, password } = this.state;
     const error = this.handleError();
     return (
-      <div>
-        <h2>Signup</h2>
-        <p>To See the Exhibitions you first need to signup</p>
+      <div className="container">
+        <h1>Signup</h1>
+        <p>Sign up to browse the MET Collection</p>
         <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange} />

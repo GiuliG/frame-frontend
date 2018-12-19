@@ -50,7 +50,7 @@ class ExhibitionList extends Component {
     } return (
       <div>
         <h2>{param}</h2>
-        <div className="pad-bottom">
+        <div id="main">
           {paintings.map((painting) => {
             const dept = painting.department.toLowerCase();
             const match = dept.includes(param);
