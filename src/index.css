@@ -288,13 +288,13 @@ li:nth-child(14) {
 
 }
 li:nth-child(15) {
-  grid-column: span 2;
+  grid-column: span 3;
   grid-row: span 3;
   background-image: url('/images/black.jpg')
 }
 li:nth-child(16) {
-  grid-row: span 2;
-  grid-column: span 2;
+  grid-row: span 0;
+  grid-column: span 0;
   background-image: url('/images/grey.jpg')
 }
 li:nth-child(17) {
@@ -309,7 +309,7 @@ li:nth-child(18) {
 
 }
 li:nth-child(19) {
-  grid-column: span 2;
+  
   grid-row: span 3;
   background-image: url('/images/yellow.jpg')
   
