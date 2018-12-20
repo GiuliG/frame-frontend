@@ -37,9 +37,9 @@ class Private extends Component {
     const loading = this.state.isLoading;
     const favs = this.state.paintings.favs;
     return (
-      <div>
-        <h1>Welcome {this.props.user.username}</h1>
-        <h3>Check Your Personal Collections</h3>
+      <div className="container">
+        <h1 className="username">{this.props.user.username}'s favorites</h1>
+        <h4>Browse Your Personal Collection</h4>
         
     
         {loading ? <p>Loading</p> : <div id="main">{favs.map((eachFav) => {

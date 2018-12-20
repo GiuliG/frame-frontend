@@ -40,6 +40,15 @@ div.container p {
   font-size: 1.5rem;
 }
 
+div.container h4 {
+  text-align: center;
+}
+
+div.container h1.username {
+  font-size: 3.5rem;
+  border-bottom: 3px solid #f4c65a;
+}
+
 /* ---- layout ---- */
 
 #main {
@@ -49,8 +58,6 @@ div.container p {
 .container {
   padding: 4rem;
 }
-
-
 
 @media (min-width: 768px) {
   .container {
