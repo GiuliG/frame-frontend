@@ -380,6 +380,40 @@ div.detail-page{
   font-size: 18px;
 }
 
+/* --- Scan component --- */ 
+input.scan-button {
+  margin-top: 1rem;
+  background: #f4c65a;
+  border: none;
+  text-align: center;
+  width: 50%;
+}
+
+#scan h1 {
+  font-size: 40px;
+  font-family: "MetSans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: -.1rem;
+}
+
+#scan p{
+  font-size: 18px;
+  font-family: "MetSans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.custom-card {
+  margin: 2.2rem 2rem 10rem 2rem;
+  padding: 2rem 2.2rem 1.4rem 1.6rem;
+  overflow: hidden;
+  border-radius: .7rem;
+  background-color: #f1f1f1;
+  box-shadow: 2px 4px 16px rgba(86, 79, 78, 0.3);
+}
+
+.custom-card p{
+  font-size: 18px;
+}
 /* --- PaintingCard component --- */ 
 
 div.painting-card {
