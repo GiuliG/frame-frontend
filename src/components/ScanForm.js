@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { withAuth } from '../providers/AuthProvider';
 import scanService from '../lib/scan-service';
 import FileBase64 from 'react-file-base64';
-import PaintingCard from './PaintingCard';
-
-
 
 
 class ScanForm extends Component {
